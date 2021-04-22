@@ -133,7 +133,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shoot_SingleShot_AR
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7994726921487312228}
@@ -358,7 +358,7 @@ AnimatorStateMachine:
     m_Position: {x: 650, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2615802476776718340}
-    m_Position: {x: 697.5081, y: 285.02704, z: 0}
+    m_Position: {x: 700, y: 280, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
