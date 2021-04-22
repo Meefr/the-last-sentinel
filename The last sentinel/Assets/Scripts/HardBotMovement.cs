@@ -28,7 +28,7 @@ public class HardBotMovement : MonoBehaviour
             animator.SetBool("Run", true);
             moveBackward();
         }
-        else if(Vector3.Distance(transform.position, player.transform.position) > 10)
+        else if(Vector3.Distance(transform.position, player.transform.position) > 8)
         {
             animator.SetBool("Run", true);
             moveforward();
@@ -45,7 +45,7 @@ public class HardBotMovement : MonoBehaviour
     }
     private void moveBackward()
     {
-        Vector3 destination = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z + 2);
+        Vector3 destination = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z + 0.5f);
         navMeshAgent.SetDestination(destination);
     }
     private void stop()
