@@ -18,15 +18,20 @@ public class HardBotMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRange())
+        if (ShootRange())
         {
-            stop();
             animator.SetBool("Run", false);
+            stop();
         }
-        else
+        else if (RetreetRange())
         {
-            move();
             animator.SetBool("Run", true);
+            moveBackward();
+        }
+        else if(Vector3.Distance(transform.position, player.transform.position) > 10)
+        {
+            animator.SetBool("Run", true);
+            moveforward();
         }
         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -34,17 +39,32 @@ public class HardBotMovement : MonoBehaviour
 
 
     }
-    private void move()
+    private void moveforward()
     {
         navMeshAgent.SetDestination(player.transform.position);
+    }
+    private void moveBackward()
+    {
+        Vector3 destination = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z + 2);
+        navMeshAgent.SetDestination(destination);
     }
     private void stop()
     {
         navMeshAgent.SetDestination(transform.position);
     }
-    private bool inRange()
+    private bool ShootRange()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= 5)
+        if (Vector3.Distance(transform.position, player.transform.position) <= 8 && Vector3.Distance(transform.position, player.transform.position) >=7)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+    private bool RetreetRange()
+    {
+
+        if (Vector3.Distance(transform.position, player.transform.position) < 7)
         {
             return true;
         }
