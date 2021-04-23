@@ -120,7 +120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6918362559858451893}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6918362558674819015
 GameObject:
@@ -169,6 +169,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -841,7 +842,7 @@ GameObject:
   - component: {fileID: 6918362559401467345}
   - component: {fileID: 6918362559401467344}
   m_Layer: 0
-  m_Name: new armed player 1
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,6 +864,7 @@ Transform:
   - {fileID: 6918362560492400458}
   - {fileID: 6918362559754618846}
   - {fileID: 520066299435084632}
+  - {fileID: 6918362560422074936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 194.183, z: 0}
@@ -1090,6 +1092,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1115,6 +1118,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6918362559460225358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1662,6 @@ Transform:
   m_LocalPosition: {x: -0, y: 0.061884765, z: 0.0232162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6918362560422074936}
   - {fileID: 6918362558628317681}
   m_Father: {fileID: 6918362559901071222}
   m_RootOrder: 0
@@ -2308,12 +2311,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6918362560422074915}
-  m_LocalRotation: {x: -0.01095257, y: -0.17022952, z: 0.08998552, w: 0.981226}
-  m_LocalPosition: {x: -0.18707956, y: 0.22392204, z: 0.20543334}
+  m_LocalRotation: {x: 0.050904542, y: -0.13262989, z: -0.047877192, w: 0.9886991}
+  m_LocalPosition: {x: -0.0400106, y: 1.7300034, z: 0.30002186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6918362559858451893}
-  m_RootOrder: 0
+  m_Father: {fileID: 6918362559401467372}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0.52400005, y: -19.637001, z: 10.389001}
 --- !u!20 &6918362560422074940
 Camera:
