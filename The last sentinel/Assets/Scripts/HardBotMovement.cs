@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 public class HardBotMovement : MonoBehaviour
 {
-    public GameObject player;
+    private Transform player;
     NavMeshAgent navMeshAgent;
     public float movementSpeed;
     public float rotationSpeed;
     Animator animator;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
