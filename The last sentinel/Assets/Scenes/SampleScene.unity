@@ -3242,6 +3242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41f07e75dd1bf3459346b56f01af6ab, type: 3}
+
 --- !u!850595691 &1813300352
 LightingSettings:
   m_ObjectHideFlags: 0
