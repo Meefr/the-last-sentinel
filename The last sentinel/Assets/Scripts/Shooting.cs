@@ -8,12 +8,13 @@ public class Shooting : MonoBehaviour
     public float startTimeBtwShots;
 
     public GameObject bullet;
-    public GameObject player;
+    private Transform player;
 
     Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBtwShots = startTimeBtwShots;
         animator = GetComponent<Animator>();
     }
