@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseFollow : MonoBehaviour
 {
-    public float mouseSensitivity = 1000f;
+    public float mouseSensitivity = 5000f;
     public Transform playerBody;
     float xRotaion = 0f;
     // Start is called before the first frame update
