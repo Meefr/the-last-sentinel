@@ -24,11 +24,7 @@ public class HardBotMovement : MonoBehaviour
             animator.SetBool("Run", false);
             stop();
         }
-        else if (RetreetRange())
-        {
-            animator.SetBool("Run", true);
-            moveBackward();
-        }
+       
         else if(Vector3.Distance(transform.position, player.transform.position) > 8)
         {
             animator.SetBool("Run", true);

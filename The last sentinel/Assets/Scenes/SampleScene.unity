@@ -108,8 +108,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentSlope: 53
+    agentClimb: 0.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -258,12 +258,12 @@ PrefabInstance:
     - target: {fileID: 2070314464086774913, guid: f40d3b1648a1b994daa08b4606a0dfbf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2070314464086774913, guid: f40d3b1648a1b994daa08b4606a0dfbf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 239.781
+      value: 221.29
       objectReference: {fileID: 0}
     - target: {fileID: 2070314464086774913, guid: f40d3b1648a1b994daa08b4606a0dfbf,
         type: 3}
@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 2070314464086774913, guid: f40d3b1648a1b994daa08b4606a0dfbf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 224.154
+      value: 209.25
       objectReference: {fileID: 0}
     - target: {fileID: 2070314464086774913, guid: f40d3b1648a1b994daa08b4606a0dfbf,
         type: 3}
@@ -3636,12 +3636,12 @@ PrefabInstance:
     - target: {fileID: 2297855326158905232, guid: 2ebf9b6d0bd67d844a03fa3bc9eb0798,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2297855326158905232, guid: 2ebf9b6d0bd67d844a03fa3bc9eb0798,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 218.24594
+      value: 216.01
       objectReference: {fileID: 0}
     - target: {fileID: 2297855326158905232, guid: 2ebf9b6d0bd67d844a03fa3bc9eb0798,
         type: 3}
@@ -3651,7 +3651,7 @@ PrefabInstance:
     - target: {fileID: 2297855326158905232, guid: 2ebf9b6d0bd67d844a03fa3bc9eb0798,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 212
+      value: 214.15
       objectReference: {fileID: 0}
     - target: {fileID: 2297855326158905232, guid: 2ebf9b6d0bd67d844a03fa3bc9eb0798,
         type: 3}
@@ -3831,6 +3831,7 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
+<<<<<<< HEAD
 --- !u!20 &2126144022 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2070314465073795921, guid: f40d3b1648a1b994daa08b4606a0dfbf,
@@ -3906,3 +3907,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 743efef7b2ede404db725c85408928d5, type: 3}
+=======
+>>>>>>> 5e4ebda59c1dc57072392d661edf36c34b6526df
