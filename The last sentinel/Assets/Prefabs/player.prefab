@@ -986,6 +986,7 @@ GameObject:
   - component: {fileID: 2070314464086774972}
   - component: {fileID: 2070314464086774973}
   - component: {fileID: 8987436764482258476}
+  - component: {fileID: 3379015458392501460}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1103,6 +1104,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1461338, y: 2.4316554, z: 1.0880845}
   m_Center: {x: 0.073066935, y: 1.0787089, z: 0.04404223}
+--- !u!114 &3379015458392501460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070314464086774970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d275038062355c1498b7a29af103c6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  fireRate: 15
+  maxAmmo: 100
+  maxCapacity: 10
+  reloadTime: 1
+  fpsCamera: {fileID: 0}
 --- !u!1 &2070314464111982627
 GameObject:
   m_ObjectHideFlags: 0

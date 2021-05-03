@@ -1467,6 +1467,7 @@ GameObject:
   - component: {fileID: 3510387677137470948}
   - component: {fileID: 3510387677137470949}
   - component: {fileID: -8990915262675260302}
+  - component: {fileID: -3224260460666802867}
   m_Layer: 0
   m_Name: hardbot
   m_TagString: Untagged
@@ -1593,7 +1594,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwShots: 2
   bullet: {fileID: 7444628773077311799, guid: 332796aab5e02484ab7dc65cd3ac20ff, type: 3}
-  player: {fileID: 0}
+--- !u!114 &-3224260460666802867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2297855326159324080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df26975cc1602f04d913d23c8d575702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &2297855326159324082
 GameObject:
   m_ObjectHideFlags: 0

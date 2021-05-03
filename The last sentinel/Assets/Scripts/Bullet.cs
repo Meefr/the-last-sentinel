@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        
         target = new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z);
     }
 

@@ -11,6 +11,10 @@ public class Gun : MonoBehaviour {
     public Camera fpsCamera;
     private bool isReloading = false;
     private float nextTimeToFire = 0f;
+
+    public GameObject bullet;
+  
+
     void OnEnable() {
         isReloading = false;
     }
@@ -27,9 +31,11 @@ public class Gun : MonoBehaviour {
             return;
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
+            Vector3 position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+            Instantiate(bullet, position, transform.rotation);
             shoot();
         }
     }
