@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 public class Gun : MonoBehaviour {
     public float damage = 10f;
     public float range = 100f;
@@ -17,6 +18,8 @@ public class Gun : MonoBehaviour {
 
     private ParticleSystem explosion;
     bool isPlaying = false;
+
+    public Text reloElement;
     void OnEnable() {
         isReloading = false;
     }
@@ -25,12 +28,15 @@ public class Gun : MonoBehaviour {
             currentAmmo = maxCapacity;
         gunShot = GetComponent<AudioSource>();
         explosion = GetComponent<ParticleSystem>();
+        reloElement.text = "Reloading . . .";
+        reloElement.enabled = false;
     }
     // Update is called once per frame
     void Update() {
         if (isReloading)
             return;
         if (currentAmmo <= 0 && maxAmmo > 0) {
+            reloElement.enabled = true;
             StartCoroutine(reload());
             return;
         }
@@ -59,6 +65,7 @@ public class Gun : MonoBehaviour {
         currentAmmo = maxCapacity;
         maxAmmo -= maxCapacity;
         isReloading = false;
+        reloElement.enabled = false;
     }
     void shoot() {
         RaycastHit hitInfo;
