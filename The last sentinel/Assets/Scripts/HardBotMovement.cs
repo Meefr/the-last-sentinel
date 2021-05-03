@@ -9,11 +9,13 @@ public class HardBotMovement : MonoBehaviour
     public float movementSpeed;
     public float rotationSpeed;
     Animator animator;
+    private AudioSource deathSound;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        deathSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class HardBotMovement : MonoBehaviour
             stop();
         }
        
-        else if(Vector3.Distance(transform.position, player.transform.position) > 8)
+        else if(Vector3.Distance(transform.position, player.transform.position) > 8 && !animator.GetBool("died"))
         {
             animator.SetBool("Run", true);
             moveforward();

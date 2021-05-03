@@ -10,6 +10,6 @@ public class Target : MonoBehaviour
         }
     }
     void die() {
-        Destroy(gameObject);
+        Destroy(gameObject,2f);
     } 
 }

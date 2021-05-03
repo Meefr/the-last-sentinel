@@ -6,6 +6,7 @@ public class PlayerBullet : MonoBehaviour
 {
     private Transform player;
     private Rigidbody rigidbody;
+    public Camera mainCamera;
     public float m_Speed = 10f;
     public float m_Lifespan = 3f;
     // Start is called before the first frame update
