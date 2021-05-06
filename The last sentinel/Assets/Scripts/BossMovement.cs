@@ -17,12 +17,12 @@ public class BossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) > 7)
+        if (Vector3.Distance(transform.position, player.transform.position) > 5 && Vector3.Distance(transform.position, player.transform.position) <= 25)
         {
             animator.SetBool("Run", true);
             agent.SetDestination(player.transform.position);
         }
-        else if(Vector3.Distance(transform.position, player.transform.position) <= 5)
+        else if(Vector3.Distance(transform.position, player.transform.position) <= 3)
         {
             animator.SetBool("InRange", true);
             animator.SetBool("Run", false);

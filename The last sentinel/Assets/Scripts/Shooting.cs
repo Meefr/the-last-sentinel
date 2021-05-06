@@ -22,7 +22,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(animator.GetBool("Run") == false)
+        if(animator.GetBool("Run") == false && animator.GetBool("range") == true)
         {
         if(timeBtwShots <= 0)
         {

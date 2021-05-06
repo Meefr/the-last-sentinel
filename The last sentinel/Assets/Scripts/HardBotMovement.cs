@@ -24,12 +24,14 @@ public class HardBotMovement : MonoBehaviour
         if (ShootRange())
         {
             animator.SetBool("Run", false);
+            animator.SetBool("range", true);
             stop();
         }
        
         else if(Vector3.Distance(transform.position, player.transform.position) > 8 && !animator.GetBool("died"))
         {
             animator.SetBool("Run", true);
+            animator.SetBool("range", false);
             moveforward();
         }
         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);

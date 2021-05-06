@@ -11,6 +11,8 @@ public class anime : MonoBehaviour
     public Transform playerBody;
     public bool bl = false, bm=true;
     private Vector3 v, d;
+    
+    public MeshRenderer weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,26 @@ public class anime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if (Input.GetKey("e"))
+        {
+            weapon.enabled = false;
+            anim.SetInteger("controllerr", 6);
+            dancecam.enabled = true;
+            maincam.enabled = false;
+            backcam.enabled = false;
+
+        }
+        else
+        {
+            if (weapon.enabled == false)
+            {
+                bm = false;
+                maincam.enabled = bl;
+                backcam.enabled = !bl;
+                bl = !bl;
+            }
+            weapon.enabled = true;
+        }
         if (Input.GetKey("w"))
         {
             anim.SetInteger("controllerr", 1);
@@ -40,13 +62,6 @@ public class anime : MonoBehaviour
         {
             anim.SetInteger("controllerr", 5);
         }
-        else if (Input.GetKey("e"))
-        {
-            anim.SetInteger("controllerr", 6);
-            dancecam.enabled = true;
-            maincam.enabled = false;
-            backcam.enabled = false;
-        }
         else if (Input.GetKey("c"))
         {
             dancecam.enabled = false;
@@ -58,7 +73,7 @@ public class anime : MonoBehaviour
                 bl = !bl;
             }
         }
-        else
+        else if(!Input.GetKey("e"))
         {
             bm = true;
             anim.SetInteger("controllerr", 0);

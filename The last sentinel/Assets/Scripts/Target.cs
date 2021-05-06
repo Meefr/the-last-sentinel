@@ -10,6 +10,11 @@ public class Target : MonoBehaviour
         }
     }
     void die() {
-        Destroy(gameObject,2f);
+        if(gameObject.CompareTag("Drone"))
+        {
+            Destroy(gameObject);
+        }
+        else
+            Destroy(gameObject,2f);
     } 
 }

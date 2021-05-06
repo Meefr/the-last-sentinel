@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+
 public class Gun : MonoBehaviour {
     public float damage = 10f;
     public float range = 100f;
@@ -20,6 +21,10 @@ public class Gun : MonoBehaviour {
     bool isPlaying = false;
 
     public Text reloElement;
+    public Text score;
+    private int scoreNumber;
+    public Text bullets;
+
     void OnEnable() {
         isReloading = false;
     }
@@ -30,12 +35,22 @@ public class Gun : MonoBehaviour {
         explosion = GetComponent<ParticleSystem>();
         reloElement.text = "Reloading . . .";
         reloElement.enabled = false;
+        scoreNumber = 0;
+        score.text = "Score : " + scoreNumber.ToString();
+        score.enabled = true;
+        bullets.text = currentAmmo.ToString() + " / " + maxAmmo.ToString();
+        bullets.enabled = true;
+       
     }
     // Update is called once per frame
     void Update() {
+
+       
+        bullets.text = currentAmmo.ToString() + " / " + maxAmmo.ToString();
+        bullets.enabled = true;
         if (isReloading)
             return;
-        if (currentAmmo <= 0 && maxAmmo > 0) {
+        if ((currentAmmo <= 0 && maxAmmo > 0) || Input.GetKeyDown("r")) {
             reloElement.enabled = true;
             StartCoroutine(reload());
             return;
@@ -80,7 +95,10 @@ public class Gun : MonoBehaviour {
             }
             if(target.health <= 0f)
             {
+                scoreNumber += 10;
+                score.text = "Score : " + scoreNumber.ToString();
                 target.GetComponent<Animator>().SetBool("died", true);
+                score.enabled = true;
             }
         }
     }

@@ -1123,6 +1123,8 @@ MonoBehaviour:
   maxCapacity: 10
   reloadTime: 1
   fpsCamera: {fileID: 0}
+  bullet: {fileID: 0}
+  reloElement: {fileID: 0}
 --- !u!1 &2070314464111982627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,13 +1542,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070314464414731950}
-  m_LocalRotation: {x: 0, y: 0.9914449, z: 0, w: 0.13052626}
-  m_LocalPosition: {x: 1, y: 0.7309999, z: 3.66}
+  m_LocalRotation: {x: 0.0055114953, y: 0.9905606, z: -0.04186395, w: 0.13040984}
+  m_LocalPosition: {x: -0.6300013, y: 0.98999786, z: 2.580013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2070314464086774913}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 165, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.84, y: 165, z: 0}
 --- !u!20 &2070314464414731953
 Camera:
   m_ObjectHideFlags: 0
