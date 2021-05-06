@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Shootable
   - Drone
+  - crossHair
+  - bullet
+  - Sword
   layers:
   - Default
   - TransparentFX
